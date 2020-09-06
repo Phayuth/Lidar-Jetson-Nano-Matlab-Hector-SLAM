@@ -33,7 +33,7 @@ Scroll down until the last line and write
 ```
 source ~/ydlidar_ws/devel/setup.bash
 ```
-Then Exit\
+Then Exit out\
 Add a device alias /dev/ydlidar to the X4 serial port
 ```
 $ cd src/ydlidar/startup
@@ -61,16 +61,47 @@ Then Ping each other IP address via
 ```
 $ ping (IP_adress)
 ```
-# Initiate ROS master and ROS client
+# Setup ROS master and ROS client
 Use Jetson nano as ROS master, Matlab Window as ROS client
 ### Jetson nano
 Openup ~/.bashrc
 ```
 $ gedit ~/.bashrc
 ```
-Scroll down until the last line and write
+Scroll down until the last line and write\
+Note: Replace {IP} with _localhost_ = if SelfHost, and  _IP Adress of Host_ = if Host by another Machine 
 ```
-ROS_MASTER_URI=
-ROS_
+export ROS_MASTER_URI=http://{IP}:11311
+export ROS_HOSTNAME={Machine IP Adress}
+export ROS_IP={Machine IP Adress}
 ```
-Then Exit\
+Then Exit out
+# Initiate Stage
+## Initiate Lidar YDX4
+On Ubuntu terminal
+Run ROSCORE
+```
+$ roscore
+```
+Open Another terminal
+```
+$ cd ydlidar_ws/src/ydlidar/launch
+$ rosluanch lidar.launch
+```
+## Initiate Subscriber in Matlab
+On Matlab terminal
+```
+>> rosinit('IP Address of ROS Machine');
+```
+Confirm connection via
+```
+>> rostopic list
+>> rostopic echo /scan
+```
+# MATLAB SLAM Function
+Run Matlab Script : Slam_Matlab.m\
+Change 'For loop'
+```
+for i=1:{Desire Duration}
+```
+at the end of for loop, the Result will display on Figure
