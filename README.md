@@ -76,8 +76,9 @@ export ROS_HOSTNAME={Machine IP Adress}
 export ROS_IP={Machine IP Adress}
 ```
 Then Exit out
-# Initiate Stage
-## Initiate Lidar YDX4
+# MATLAB SLAM Function
+## Initiate Stage
+### Initiate Lidar YDX4
 On Ubuntu terminal
 Run ROSCORE
 ```
@@ -88,7 +89,7 @@ Open Another terminal
 $ cd ydlidar_ws/src/ydlidar/launch
 $ rosluanch lidar.launch
 ```
-## Initiate Subscriber in Matlab
+### Initiate Subscriber in Matlab
 On Matlab terminal
 ```
 >> rosinit('IP Address of ROS Machine');
@@ -98,7 +99,6 @@ Confirm connection via
 >> rostopic list
 >> rostopic echo /scan
 ```
-# MATLAB SLAM Function
 Run Matlab Script : Slam_Matlab.m\
 Change 'For loop'
 ```
