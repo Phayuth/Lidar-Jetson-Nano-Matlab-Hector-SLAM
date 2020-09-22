@@ -1,5 +1,6 @@
 # Lidar-Jetson-Nano-Matlab-SLAM
 LidarSLAM in MATLAB using the interference of ROS, Jetson Nano
+![](https://github.com/Phayuth/Lidar-Jetson-Nano-Matlab-SLAM/blob/master/MatlabSlamDemo.png?raw=true)
 # Requirement
 ## Hardware
 1x [Nvidia Jetson Nano](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetsonNano/JetsonNano-DevKit_Front-Top_Right_trimmed.jpg)\
@@ -99,6 +100,7 @@ Confirm connection via
 >> rostopic list
 >> rostopic echo /scan
 ```
+### Execute Matlab Script
 Run Matlab Script : Slam_Matlab.m\
 Change 'For loop'
 ```
