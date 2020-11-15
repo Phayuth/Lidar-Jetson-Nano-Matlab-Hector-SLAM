@@ -106,4 +106,5 @@ Change 'For loop'
 ```
 for i=1:{Desire Duration}
 ```
-at the end of for loop, the Result will display on Figure
+At the end of for loop, the Result will display on Figure.
+#### All Set.
