@@ -21,7 +21,7 @@ $ mkdir -p ~/ydlidar_ws/src
 ```
 Clone YDX4 Github repository into src directory and Catkin_make
 ```
-$ mkdir -p ~/ydlidar_ws/src
+$ git clone https://github.com/EAIBOT/ydlidar.git
 $ cd ..
 $ catkin_make
 ```
