@@ -1,5 +1,4 @@
 # Lidar-Jetson-Nano-Matlab-Hector-SLAM
-LidarSLAM in MATLAB,HectorSLAM using ROS on Jetson Nano
 ![](https://github.com/Phayuth/Lidar-Jetson-Nano-Matlab-SLAM/blob/master/MatlabSlamDemo.png?raw=true)
 # Requirement
 ## Hardware
